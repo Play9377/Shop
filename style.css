@@ -1,0 +1,47 @@
+body{
+    background-color: #F5F5F5;
+}
+
+.search svg {
+    font-size: 1rem;
+    color: black;
+}
+
+.work_back {
+    padding: 0.5rem;
+}
+
+.work_card {
+    padding: 0.6rem;
+    border-radius: 0.8rem;
+    background-color: #FFFFFF;
+}
+
+.work_img {
+    border-radius: 0.85rem;
+    margin-bottom: 0.4rem;
+}
+
+.work_title {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.work_bottom {
+    display: flex;
+    align-items: center;
+}
+
+.work_bottom div {
+    flex: 1 1 auto;
+}
+
+.work_bottom span {
+    font-size: 0.8rem;
+    color: #EF5350;
+}
+
+.work_bottom svg{
+    font-size: 0.8rem;
+    color: #9E9E9E;
+}

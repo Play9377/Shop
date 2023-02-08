@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小商城</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+  <!--弹窗-->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+      <div class="modal-content">
+ 
+    <!-- 模态框头部 -->
+        <div class="modal-header">
+          <h6 class="modal-title" id="title">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </h6></div>
+ 
+        <!-- 模态框主体 -->
+        <div class="modal-body">
+          <p class="text-justify" id="msg"></p>
+          <img width="100%" src="static/picture/img.webp" alt="" class="work_img" id="modal_img">
+        </div>
+ 
+        <!-- 模态框底部 -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+          <button type="button" class="btn btn-primary submit">联系</button>
+        </div>
+ 
+      </div>
+    </div>
+  </div>
+
+  <!--弹窗-->
+  <div class="modal fade" id="Modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+ 
+    <!-- 模态框头部 -->
+        <div class="modal-header">
+          <h6 class="modal-title">添加微信联系
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </h6></div>
+ 
+        <!-- 模态框主体 -->
+        <div class="modal-body">
+          <img width="100%" src="static/picture/wx1.jpg.png" alt="">
+        </div>
+ 
+        <!-- 模态框底部 -->
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button> -->
+          <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+        </div>
+ 
+      </div>
+    </div>
+  </div>
+
+      <div class="back">
+        <nav class="navbar navbar-light navbar-light bg-white fixed-top shadow-sm rounded">
+          <a class="navbar-brand">小商城</a>
+          <div class="form-inline">
+              <button type="button" class="btn btn-light submit">联系</button>
+            <!--<div class="search">-->
+            <!--  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">-->
+            <!--    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>-->
+            <!--  </svg>-->
+            <!--</div>-->
+          </div>
+        </nav>
+  
+        <div class="container-scroller">
+          <div class="row row-cols-2" style="margin: 60px 0px 0 0px;">
+            
+            <div class="work_back" onclick="msg('近期特价活动商品','哔哩哔哩会员 15个月 125。<br><br>QQ超级会员 15个月 140。<br><br>爱奇艺两年会员 210。<br><br>芒果TV全屏影视会员年费 125。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/742638ff-88fb-4b70-97a7-4356c8d8d6ae.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">近期特价活动商品</h3>
+  
+                <div class="work_bottom">
+                  <span>￥125-210</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('3000+微信红包皮肤','3000+微信红包皮肤。<br><br>网页：https://k.youshop10.com/rHBJMV1D','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img17.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">3000+微信红包皮肤</h3>
+  
+                <div class="work_bottom">
+                  <span>￥推荐</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('埋堆堆会员年费','直充。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/ddfd79179aa1c346.png" alt="" class="work_img">
+  
+                <h3 class="work_title">埋堆堆会员年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥58.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('豪华黄钻年费','直充。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/7d99014e801562b1.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">豪华黄钻年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥90.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('QQ超级会员年费','直充。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img10.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">QQ超级会员年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥120.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('懒人听书季卡','直充。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/logo.svg" alt="" class="work_img">
+  
+                <h3 class="work_title">懒人听书季卡</h3>
+  
+                <div class="work_bottom">
+                  <span>￥12.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('WPS超级年费','直充。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/730ea92eb0add085.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">WPS超级年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥105.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('百度网盘超级年费','直充。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/logo@2x.png" alt="" class="work_img">
+  
+                <h3 class="work_title">百度网盘超级年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥180.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('爱奇艺白金、黄金会员','爱奇艺黄金13个月 140。<br><br>爱奇艺黄金年费 135 直充。<br><br>爱奇艺白金年费 180。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img_15.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">爱奇艺白金、黄金会员</h3>
+  
+                <div class="work_bottom">
+                  <span>￥140—210</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('新浪微博年费','直充。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/th.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">新浪微博年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥58.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('唯品会年费','直充。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/1592278113502.png" alt="" class="work_img">
+  
+                <h3 class="work_title">唯品会年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥45.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('叮咚买菜会员年费','直充。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/7b9751b82dccbc46a3828353916e0c7a.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">叮咚买菜会员年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥55.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('百度文库会员年费','直充。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="https://pic4.zhimg.com/80/v2-08e901af7cc31baad6408b51a413e32f_720w.webp" alt="" class="work_img">
+  
+                <h3 class="work_title">百度文库会员年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥58.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('喜马拉雅会员年费','喜马拉雅会员拥有87000+好书好课免费听，拥有会员专享、抢先听、特惠购等特权。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/s_cf257c20c7ba48d18e8ae53b53daac3c.png" alt="" class="work_img">
+  
+                <h3 class="work_title">喜马拉雅会员年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥88.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('爱奇艺白金、黄金会员','爱奇艺黄金13个月 140。<br><br>爱奇艺黄金年费 120 直充。<br><br>爱奇艺白金年费 180。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img_15.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">爱奇艺白金、黄金会员</h3>
+  
+                <div class="work_bottom">
+                  <span>￥140—210</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('快看漫画VIP年费','慢充接码 18。<br><br>快充 35。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="https://pic4.zhimg.com/80/v2-b3d564813585986f48b3e3a17973ff67_720w.webp" alt="" class="work_img">
+  
+                <h3 class="work_title">快看漫画VIP年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥18—35</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('AirPods Pro苹果耳机','最新苹果2代 88。<br><br>苹果3代耳机顶级配置-白色 95。<br><br>苹果2代耳机-洛达ab1562m芯片 125。<br><br>洛达ab1562-苹果3代耳机-顶端配置 210。<br><br>最新苹果4代耳机 135。<br><br>苹果PD快充套装 线+头 35。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/th1.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">AirPods Pro苹果耳机</h3>
+  
+                <div class="work_bottom">
+                  <span>￥35—210</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('酷狗年费会员','快速到账。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/tq_img05.png" alt="" class="work_img">
+  
+                <h3 class="work_title">酷狗年费会员</h3>
+  
+                <div class="work_bottom">
+                  <span>￥68.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('京东plus年费','没有任何限制。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/t0154c1e1a23e9b81a4.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">京东plus年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥68.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('王者、lolm代打','没有固定价格，根据市场走动欢迎咨询，价格美丽。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="https://pic1.zhimg.com/80/v2-f4c91c179c9d6af54f603e246a467d16_720w.webp?source=1940ef5c" alt="" class="work_img">
+  
+                <h3 class="work_title">王者、lolm代打</h3>
+  
+                <div class="work_bottom">
+                  <span>￥1.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('网易云黑胶年费','提供手机号直充。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/th2.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">网易云黑胶年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥70.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('施华洛世奇旗舰京东货源','下单备注: 施华洛世奇款式。<br><br>399任选/2款。款式太多没办法一一发图，你们可以去官网选款直接发图片给我下单，尽量挑选项链和手链哦！旗舰店京东直邮货源！我们内部价出给你们。如图全套包装!!!','img/img14_2.jpg')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img14_1.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">施华洛世奇旗舰京东货源</h3>
+  
+                <div class="work_bottom">
+                  <span>￥399.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('腾讯视频会员年费','慢充年费 135。<br><br>慢充两年 230。<br><br>官方年费直充 142。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/cea1e6a3f6abdde6dae7895538796e31.png" alt="" class="work_img">
+  
+                <h3 class="work_title">腾讯视频会员年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥135—230</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('腾讯超级影视年费','支持电视端 四屏可用。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img14.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">腾讯超级影视年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥195.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('知乎盐选年费会员','手机号直充。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img13.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">知乎盐选年费会员</h3>
+  
+                <div class="work_bottom">
+                  <span>￥110.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('keep+喜马拉雅年费','手机号直充。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img12.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">keep+喜马拉雅年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥140.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('腾讯NBA超级会员','腾讯NBA-2个月超级体育会员—40<br><br>腾讯NBA-6个月超级体育会员---80<br><br>腾讯NBA-12个月超级体育会员---160<br><br>提供qq号或者微信 秒到账','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img11.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">腾讯NBA超级会员</h3>
+  
+                <div class="work_bottom">
+                  <span>￥40—160</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('施华洛世奇项链','香港原厂原单单品质。','img/img10_2.jpg')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img10_1.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">施华洛世奇项链</h3>
+  
+                <div class="work_bottom">
+                  <span>￥200.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('QQ超级会员年费','提供账号直充 可叠加。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img10.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">QQ超级会员年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥125.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('曹操出行打车卷','手机号直充  如果是新人的话可以扫下面的二维码注册新人送一折卷，新人打车走我码再反8块新人基本白嫖打车。','img/img9_2.jpg')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img9_1.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">曹操出行打车卷</h3>
+  
+                <div class="work_bottom">
+                  <span>￥2.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('哔哩哔哩大会员年费','人工开单需要配合接收验证码。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img7.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">哔哩哔哩大会员年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥123.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('优酷年费会员','人工开单需要配合接受验证码，自身有会员的不行。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img6.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">优酷年费会员</h3>
+  
+                <div class="work_bottom">
+                  <span>￥58.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('芒果TV会员年费','需要配合接受验证码没什么要求。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img5.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">芒果TV会员年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥88.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('王者/lolm改战区','每周一可以改，扫码上号无需担心，通过官方方法也不用担心封号。可以帮忙查询战力低的地区。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/v2-f8f0650838a9f70c7db71aaf0ad6ff25_1440w.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">王者/lolm改战区</h3>
+  
+                <div class="work_bottom">
+                  <span>￥3.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('京东代挂一个月','这个就不介绍了涉及京东-京喜-京东极速版，各种活动签到做任务代挂，每天撸京豆和红包卷等等。','img/img4_1.jpg')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/t0154c1e1a23e9b81a4.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">京东代挂一个月</h3>
+  
+                <div class="work_bottom">
+                  <span>￥3.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('饿了么超级会员年费','需要客户接电话配合-提供饿了么验证码，本身有会员不能。<br/><br/>如果饿了么绑定了淘宝需要事先解绑，打开饿了么APP点我的头像点进去往下面淘宝解绑。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img3.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">饿了么超级会员年费</h3>
+  
+                <div class="work_bottom">
+                  <span>￥40.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div><div class="work_back" onclick="msg('夸克SVIP年费会员','不可叠加，本身有夸克会员的不可购买。否则概不退款。不包售后。','')">
+              <div class="work_card">
+                <img width="100%" height="100" src="static/picture/img1.jpg" alt="" class="work_img">
+  
+                <h3 class="work_title">夸克SVIP年费会员</h3>
+  
+                <div class="work_bottom">
+                  <span>￥8.00</span>
+                  <div></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-cart3" viewbox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>              
+          </div>
+        </div>
+      </div>
+
+      <!-- <p class="text-monospace font-weight-bold text-center" style="margin-top: 5rem;">©2022 小商城</p> -->
+      
+      <script src="static/js/jquery-3.6.0.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <script>
+      function msg(title,content,img) {
+        if(img==""){
+          $("#modal_img").hide();
+        } else {
+          $("#modal_img").show();
+          $("#modal_img").attr('src',img);
+        }
+        $("#title").text(title);
+        $("#msg").html(content);
+        $("#myModal").modal("show");
+      }
+      $(".submit").click(function(){
+        $("#myModal").modal("hide");
+        $("#Modal").modal("show");
+      });
+    </script>
+
+	<div style="display:none;"><a href="https://smalltool.github.io/">仿站工具箱</a></div>
+</body>
+</html>
